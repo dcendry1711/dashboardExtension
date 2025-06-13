@@ -9,4 +9,3 @@ fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&que
         document.body.style.backgroundImage = `url(https://seocom.agency/wp-content/uploads/2024/05/Errores-Web-404-403-503-502-401.-Significado-y-soluciones-1.jpg.webp)`
     })
 
-    //https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=nature
