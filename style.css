@@ -27,18 +27,43 @@ main {
 
 }
 
+.city {
+    display: flex;
+    gap: 1em;
+    align-items: last baseline;
+}
+
 .top-flexbox {
     justify-content: space-between;
 }
 
 .middle-flexbox {
+    position: relative;
+    top: -15%;
     justify-content: center;
 }
 
 .symbol-section {
     display: flex;
-    gap: 1em;
+    gap: .7em;
     align-items: center;
+}
+
+.city {
+    font-size: 2rem;
+}
+
+.city-icon {
+    font-size: 3rem;
+}
+
+.weather-conditions {
+    margin-top: .7em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .7em;
+    font-size: 1.5rem;
 }
 
 #cryptos {

@@ -76,6 +76,33 @@ fetch("https://api.coingecko.com/api/v3/coins/solana")
 
 /*WEATHER API*/
 
+navigator.geolocation.getCurrentPosition((position) => {
+
+    const lat = position.coords.latitude 
+    const lon = position.coords.longitude
+
+        fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&lang=pl&appid=42493181434ee60318280075b6a8f18b`)
+            .then(res => res.json())
+            .then(weather => {
+                console.log(weather)
+                const temp = (weather.main.temp).toFixed(1)
+                document.getElementById('weather').innerHTML = `
+                    <div class="city">
+                        <p class="city-icon">🏘️</p>
+                        <p>${weather.name}</p>
+                    </div>
+                    <div class="weather-conditions">
+                        <p>🌡️ ${temp}°C</p>
+                        <p>⏲️ ${weather.main.pressure}hPa</p>
+                        <p>💧 ${weather.main.humidity}%</p>
+                    </div>
+                `
+            })
+            .catch(err => console.log(err))
+})
+
+
+
 /*TIME*/
 
 function actualTime(){
