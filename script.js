@@ -101,8 +101,6 @@ navigator.geolocation.getCurrentPosition((position) => {
             .catch(err => console.log(err))
 })
 
-
-
 /*TIME*/
 
 function actualTime(){
