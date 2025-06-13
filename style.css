@@ -11,6 +11,7 @@ body {
 
 main {
     height: 100vh;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -55,5 +56,9 @@ main {
     backdrop-filter: blur(10px);             
     border-radius: 12px;   
     padding: .5em 1em;                  
+}
+
+h1 {
+    font-size: 6rem;
 }
 

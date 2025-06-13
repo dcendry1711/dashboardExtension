@@ -77,3 +77,14 @@ fetch("https://api.coingecko.com/api/v3/coins/solana")
 /*WEATHER API*/
 
 /*TIME*/
+
+function actualTime(){
+    const time = new Date()
+    const hour = String(time.getHours()).padStart(2, '0');
+    const minutes = String(time.getMinutes()).padStart(2, '0');
+    const seconds = String(time.getSeconds()).padStart(2, '0');
+
+    document.getElementById('actual-time').textContent = `${hour}:${minutes}:${seconds}`
+}
+
+setInterval(actualTime,1000)
