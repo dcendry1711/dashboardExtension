@@ -16,7 +16,7 @@ main {
     justify-content: space-between;
     font-size: 1.2rem;
     font-weight: bold;
-    text-shadow: 1px 2px 50px black;
+    text-shadow: 2px 2px 50px black;
     color: white;
 }
 
@@ -32,5 +32,28 @@ main {
 
 .middle-flexbox {
     justify-content: center;
+}
+
+.symbol-section {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+#cryptos {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.crypto-symbol {
+    text-transform: uppercase;
+}
+
+.blur-background {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);             
+    border-radius: 12px;   
+    padding: .5em 1em;                  
 }
 
