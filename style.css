@@ -49,6 +49,12 @@ main {
     align-items: center;
 }
 
+.temp-conditions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .city {
     font-size: 2rem;
 }
@@ -58,12 +64,19 @@ main {
 }
 
 .weather-conditions {
-    margin-top: .7em;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: .7em;
+    align-items: start;
+    justify-content: center;
     font-size: 1.5rem;
+}
+
+.rest-conditions {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: .5em;
 }
 
 #cryptos {

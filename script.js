@@ -86,15 +86,21 @@ navigator.geolocation.getCurrentPosition((position) => {
             .then(weather => {
                 console.log(weather)
                 const temp = (weather.main.temp).toFixed(1)
+                const iconId = weather.weather[0].icon
                 document.getElementById('weather').innerHTML = `
                     <div class="city">
                         <p class="city-icon">🏘️</p>
                         <p>${weather.name}</p>
                     </div>
                     <div class="weather-conditions">
-                        <p>🌡️ ${temp}°C</p>
-                        <p>⏲️ ${weather.main.pressure}hPa</p>
-                        <p>💧 ${weather.main.humidity}%</p>
+                        <div class="temp-conditions">
+                            <img src="https://openweathermap.org/img/wn/${iconId}@2x.png">
+                            <p>🌡️ ${temp}°C</p>
+                        </div>
+                        <div class="rest-conditions">
+                            <p>⏲️ ${weather.main.pressure}hPa</p>
+                            <p>💧 ${weather.main.humidity}%</p>
+                        </div>
                     </div>
                 `
             })
